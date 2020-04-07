@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="//messi1991.github.io">
   <title>移动端横竖屏解决 | messi1991的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="移动端横竖屏解决1sdfsds">
+  <meta name="description" content="移动端横竖屏解决 监听横竖屏变化1234567function bindOrientationChange(onChange) &amp;#123;  const resizeEvt &#x3D; &#39;onorientationchange&#39; in window ? &#39;orientationchange&#39; : &#39;resize&#39;;  if (!document.addEventListener) &amp;#123;    r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端横竖屏解决">
 <meta property="og:url" content="2020&#x2F;03&#x2F;25&#x2F;javascript&#x2F;%E7%A7%BB%E5%8A%A8%E7%AB%AF&#x2F;%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E7%AB%96%E5%B1%8F%E8%A7%A3%E5%86%B3&#x2F;index.html">
 <meta property="og:site_name" content="messi1991的博客">
-<meta property="og:description" content="移动端横竖屏解决1sdfsds">
+<meta property="og:description" content="移动端横竖屏解决 监听横竖屏变化1234567function bindOrientationChange(onChange) &amp;#123;  const resizeEvt &#x3D; &#39;onorientationchange&#39; in window ? &#39;orientationchange&#39; : &#39;resize&#39;;  if (!document.addEventListener) &amp;#123;    r">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-25T10:59:04.000Z">
-<meta property="article:modified_time" content="2020-04-07T06:59:31.055Z">
+<meta property="article:modified_time" content="2020-04-07T10:43:59.830Z">
 <meta property="article:author" content="messi1991">
 <meta property="article:tag" content="移动端">
 <meta name="twitter:card" content="summary">
@@ -189,7 +189,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="移动端横竖屏解决"><a href="#移动端横竖屏解决" target="_blank" rel="noopener" class="headerlink" title="移动端横竖屏解决"></a>移动端横竖屏解决</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sdfsds</span><br></pre></td></tr></table></figure>
+        <h2 id="移动端横竖屏解决"><a href="#移动端横竖屏解决" target="_blank" rel="noopener" class="headerlink" title="移动端横竖屏解决"></a>移动端横竖屏解决</h2><ul>
+<li>监听横竖屏变化<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindOrientationChange</span>(<span class="params">onChange</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> resizeEvt = <span class="string">'onorientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>;</span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">document</span>.addEventListener) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">window</span>.addEventListener(resizeEvt, onChange, <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li>判断横竖屏<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">detectOrientation</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//键盘调起以后可能影响判断</span></span><br><span class="line">  <span class="keyword">const</span> &#123; clientHeight, clientWidth &#125; = <span class="built_in">document</span>.documentElement;</span><br><span class="line">  <span class="keyword">return</span> clientHeight &gt;= clientWidth ? <span class="string">'portrait'</span> : <span class="string">'landscape'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//华为有的手机不支持api</span></span><br><span class="line">  <span class="keyword">const</span> mql = <span class="built_in">window</span>.matchMedia(<span class="string">'(orientation: portrait)'</span>);</span><br><span class="line">  <span class="keyword">return</span> mql.matches ? <span class="string">'portrait'</span> : <span class="string">'landscape'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//现有的解决  没有发现问题</span></span><br><span class="line">  <span class="keyword">const</span> orientation = <span class="built_in">window</span>.orientation;</span><br><span class="line">  <span class="keyword">return</span> (orientation === <span class="number">90</span> || orientation === <span class="number">-90</span>) ? <span class="string">'landscape'</span> : <span class="string">'portrait'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
 
       
@@ -307,7 +312,7 @@ gitalk.render('gitalk-container')
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: true,
+		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -394,15 +399,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">tags2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">系统</a>
               </li>
              
               <li class="article-tag-list-item">

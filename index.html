@@ -195,7 +195,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="移动端横竖屏解决"><a href="#移动端横竖屏解决" target="_blank" rel="noopener" class="headerlink" title="移动端横竖屏解决"></a>移动端横竖屏解决</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sdfsds</span><br></pre></td></tr></table></figure>
+        <h2 id="移动端横竖屏解决"><a href="#移动端横竖屏解决" target="_blank" rel="noopener" class="headerlink" title="移动端横竖屏解决"></a>移动端横竖屏解决</h2><ul>
+<li>监听横竖屏变化<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindOrientationChange</span>(<span class="params">onChange</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> resizeEvt = <span class="string">'onorientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>;</span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">document</span>.addEventListener) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">window</span>.addEventListener(resizeEvt, onChange, <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a target="_self" class="article-more-a" href="2020/03/25/javascript/移动端/移动端横竖屏解决/#more">more >></a>
+        
       
 
       
@@ -442,7 +446,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: true,
+		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -529,15 +533,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">tags2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">系统</a>
               </li>
              
               <li class="article-tag-list-item">
