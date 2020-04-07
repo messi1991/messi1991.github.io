@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "hexo generate -w",
     "build": "hexo generate",
+    "build:w": "hexo generate -w",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "deploy:git": "hexo generate --deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "deploy": "hexo generate --deploy",
+    "deploy:git": "npm run clean && npm run deploy",
+    "dev": "npm run clean && npm run server & npm run build:w"
   },
   "hexo": {
     "version": "4.1.1"
