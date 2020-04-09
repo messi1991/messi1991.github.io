@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//messi1991.github.io">
-  <title>Archives: 2020/3 | messi1991的博客</title>
+  <title>messi1991的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="描述。">
+  <meta name="description" content="styled-components 学习笔记1.  styled()三种方法 styled(reactComponent)&#96;&#96;  123456789101112131415161718192021222324252627282930313233343536373839404142&#x2F;&#x2F; 把一个React-Component包装成Styled-Componentimport React,&amp;#123;C">
 <meta property="og:type" content="website">
 <meta property="og:title" content="messi1991的博客">
-<meta property="og:url" content="archives&#x2F;2020&#x2F;03&#x2F;index.html">
+<meta property="og:url" content="blogAssets&#x2F;images&#x2F;styled-components.html">
 <meta property="og:site_name" content="messi1991的博客">
-<meta property="og:description" content="描述。">
+<meta property="og:description" content="styled-components 学习笔记1.  styled()三种方法 styled(reactComponent)&#96;&#96;  123456789101112131415161718192021222324252627282930313233343536373839404142&#x2F;&#x2F; 把一个React-Component包装成Styled-Componentimport React,&amp;#123;C">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-08T09:47:07.976Z">
+<meta property="article:modified_time" content="2018-12-07T08:45:04.915Z">
 <meta property="article:author" content="messi1991">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -173,60 +175,139 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="styled-components-学习笔记"><a href="#styled-components-学习笔记" target="_blank" rel="noopener" class="headerlink" title="styled-components 学习笔记"></a>styled-components 学习笔记</h1><h2 id="1-styled-三种方法"><a href="#1-styled-三种方法" target="_blank" rel="noopener" class="headerlink" title="1.  styled()三种方法"></a>1.  <code>styled()</code>三种方法</h2><ul>
+<li>styled(reactComponent)``</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把一个React-Component包装成Styled-Component</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React,&#123;Component&#125;<span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> styled <span class="keyword">from</span> <span class="string">'styled-components'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Xxx</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  render()&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className=&#123;<span class="keyword">this</span>.props.className&#125;&gt;</span><br><span class="line">        container</span><br><span class="line">        &lt;h2&gt;title&lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;body&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const StyledComponent = styled(Xxx)`</span></span><br><span class="line"><span class="regexp">  &amp;&#123;</span></span><br><span class="line"><span class="regexp">    color:red;</span></span><br><span class="line"><span class="regexp">    h2&#123;</span></span><br><span class="line"><span class="regexp">      color:blue;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    div&#123;</span></span><br><span class="line"><span class="regexp">      font-size:$&#123;props=&gt;props.fontSize&#125;;</span></span><br><span class="line"><span class="regexp">      color:pink;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">`;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default StyledComponent;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">import React from 'react';</span></span><br><span class="line"><span class="regexp">import ReactDOM from 'react-dom';</span></span><br><span class="line"><span class="regexp">import StyledComponent from './</span>test.js<span class="string">';</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">ReactDOM.render(</span></span><br><span class="line"><span class="string">  &lt;StyledComponent fontSize='</span><span class="number">30</span>px<span class="string">'/&gt;</span></span><br><span class="line"><span class="string">  ,window.root</span></span><br><span class="line"><span class="string">)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>styled(styledComponent)``</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component, Fragment &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> styled <span class="keyword">from</span> <span class="string">"styled-components"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Font = styled.div<span class="string">`</span></span><br><span class="line"><span class="string">  font-size: 20px;</span></span><br><span class="line"><span class="string">`</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> StyleApp = styled(Font)<span class="string">`</span></span><br><span class="line"><span class="string">    background-color: black;</span></span><br><span class="line"><span class="string">    color: red;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &amp; .a &#123;</span></span><br><span class="line"><span class="string">      color: red;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">`</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Fragment&gt;</span><br><span class="line">          &lt;StyleApp&gt;</span><br><span class="line">            <span class="number">1</span></span><br><span class="line">            &lt;div className=<span class="string">"a"</span>&gt;</span><br><span class="line">              hellow</span><br><span class="line">            &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">          &lt;/</span>StyleApp&gt;</span><br><span class="line">      &lt;<span class="regexp">/Fragment&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>styled(tagName)``</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const StyledCompoent &#x3D; styled(&#39;div&#39;)&#96;</span><br><span class="line">color: red</span><br><span class="line">&#96;</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p> 快捷方式   <code>styled.tagName</code> ` </p>
+</blockquote>
+<h2 id="插值"><a href="#插值" target="_blank" rel="noopener" class="headerlink" title="插值"></a>插值</h2><ul>
+<li><code>js</code>变量</li>
+<li><code>class</code>对象</li>
+<li><code>props</code>函数</li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import styled from 'styled-components'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> padding = <span class="string">'3em'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Section = styled.section`</span><br><span class="line">  <span class="built_in">color</span>: white;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* Pass variables as inputs */</span></span><br><span class="line">  padding: $&#123;padding&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* Adjust the background from the properties */</span></span><br><span class="line">  <span class="built_in">background</span>: $&#123;props =&gt; props.<span class="built_in">background</span>&#125;;</span><br><span class="line">`</span><br><span class="line"></span><br><span class="line">render(</span><br><span class="line">  &lt;Section <span class="built_in">background</span>=<span class="string">"cornflowerblue"</span>&gt;</span><br><span class="line">    ✨ Magic</span><br><span class="line">  &lt;/Section&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码复用"><a href="#代码复用" target="_blank" rel="noopener" class="headerlink" title="代码复用"></a>代码复用</h2><ul>
+<li><code>mixin</code> css方法<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> styled, &#123; css &#125; <span class="keyword">from</span> <span class="string">'styled-components'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> complexMixin = css`</span><br><span class="line">  color: $&#123;props =&gt; (props.whiteColor ? <span class="string">'white'</span> : <span class="string">'black'</span>)&#125;;</span><br><span class="line">`</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> StyledComp = styled.div`</span><br><span class="line">  <span class="comment">/* This is an example of a nested interpolation */</span></span><br><span class="line">  $&#123;props =&gt; (props.complex ? complexMixin : <span class="string">'color: blue;'</span>)&#125;;</span><br><span class="line">`</span><br></pre></td></tr></table></figure></li>
+<li><code>styled</code>方法二</li>
+</ul>
+<ul>
+<li><p><code>as</code> 修改标签和html内容</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import styled from "styled-components";</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Component = styled.div<span class="string">`</span></span><br><span class="line"><span class="string">  color: red;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line">render(</span><br><span class="line">  &lt;Component</span><br><span class="line">    <span class="keyword">as</span>=<span class="string">"button"</span></span><br><span class="line">    onClick=&#123;() =&gt; alert(<span class="string">'It works!'</span>)&#125;</span><br><span class="line">  &gt;</span><br><span class="line">    Hello World!</span><br><span class="line">  &lt;<span class="regexp">/Component&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>component-selector</code></p>
+</li>
+</ul>
+<h2 id="判断"><a href="#判断" target="_blank" rel="noopener" class="headerlink" title="判断"></a>判断</h2><ul>
+<li><code>isStyledComponent</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> styled, &#123; isStyledComponent &#125; <span class="keyword">from</span> <span class="string">'styled-components'</span></span><br><span class="line"><span class="keyword">import</span> MaybeStyledComponent <span class="keyword">from</span> <span class="string">'./somewhere-else'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> TargetedComponent = isStyledComponent(MaybeStyledComponent)</span><br><span class="line">  ? MaybeStyledComponent</span><br><span class="line">  : styled(MaybeStyledComponent)<span class="string">``</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ParentComponent = styled.div<span class="string">`</span></span><br><span class="line"><span class="string">  color: cornflowerblue;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  <span class="subst">$&#123;TargetedComponent&#125;</span> &#123;</span></span><br><span class="line"><span class="string">    color: tomato;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加属性-attrs"><a href="#添加属性-attrs" target="_blank" rel="noopener" class="headerlink" title="添加属性 attrs"></a>添加属性 <code>attrs</code></h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">const Input = styled.input.attrs(&#123;</span><br><span class="line">  type: 'text',</span><br><span class="line">  size: <span class="built_in">props</span> =&gt; (<span class="built_in">props</span>.small ? <span class="number">5</span> : undefined),</span><br><span class="line">&#125;)`</span><br><span class="line">  <span class="built_in">border</span>-<span class="built_in">radius</span>: 3px;</span><br><span class="line">  <span class="built_in">border</span>: 1px solid palevioletred;</span><br><span class="line">  <span class="built_in">display</span>: <span class="built_in">block</span>;</span><br><span class="line">  margin: <span class="number">0</span> <span class="number">0</span> 1em;</span><br><span class="line">  padding: $&#123;<span class="built_in">props</span> =&gt; <span class="built_in">props</span>.padding&#125;;</span><br><span class="line"></span><br><span class="line">  ::placeholder &#123;</span><br><span class="line">    <span class="built_in">color</span>: palevioletred;</span><br><span class="line">  &#125;</span><br><span class="line">`</span><br><span class="line"></span><br><span class="line">render(</span><br><span class="line">  &lt;&gt;</span><br><span class="line">    &lt;Input small placeholder=<span class="string">"Small"</span> /&gt;</span><br><span class="line">    &lt;Input placeholder=<span class="string">"Normal"</span> /&gt;</span><br><span class="line">    &lt;Input padding=<span class="string">"2em"</span> placeholder=<span class="string">"Padded"</span> /&gt;</span><br><span class="line">  &lt;/&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="主题组件-ThemeProvider"><a href="#主题组件-ThemeProvider" target="_blank" rel="noopener" class="headerlink" title="主题组件 ThemeProvider"></a>主题组件 <code>ThemeProvider</code></h2><ul>
+<li><p>添加主题</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import styled, &#123; ThemeProvider &#125; from 'styled-components'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Box = styled.div<span class="string">`</span></span><br><span class="line"><span class="string">  color: <span class="subst">$&#123;props =&gt; props.theme.color&#125;</span>;</span></span><br><span class="line"><span class="string">`</span></span><br><span class="line"></span><br><span class="line">render(</span><br><span class="line">  &lt;ThemeProvider theme=&#123;&#123; <span class="attr">color</span>: <span class="string">'mediumseagreen'</span> &#125;&#125;&gt;</span><br><span class="line">    &lt;Box&gt;I<span class="string">'m mediumseagreen!&lt;/Box&gt;</span></span><br><span class="line"><span class="string">  &lt;/ThemeProvider&gt;</span></span><br><span class="line"><span class="string">)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取主题 <code>withTheme,ThemeConsumer</code></p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//渲染完成可以获得</span></span><br><span class="line"><span class="keyword">import</span> &#123; withTheme &#125; from <span class="symbol">'styled</span>-components'</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    console.log(<span class="symbol">'Current</span> theme: ', <span class="keyword">this</span>.props.theme)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export <span class="keyword">default</span> withTheme(<span class="type">MyComponent</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//渲染过程中可以获得</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="type">ThemeConsumer</span> &#125; from <span class="symbol">'styled</span>-components'</span><br><span class="line"></span><br><span class="line">export <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;<span class="type">ThemeConsumer</span>&gt;</span><br><span class="line">        &#123;theme =&gt; &lt;div&gt;<span class="type">The</span> theme color is &#123;theme.color&#125;.&lt;/div&gt;&#125;</span><br><span class="line">      &lt;/<span class="type">ThemeConsumer</span>&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="全局样式-createGlobalStyle"><a href="#全局样式-createGlobalStyle" target="_blank" rel="noopener" class="headerlink" title="全局样式 createGlobalStyle"></a>全局样式 <code>createGlobalStyle</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createGlobalStyle, ThemeProvider &#125; <span class="keyword">from</span> <span class="string">'styled-components'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> GlobalStyle = createGlobalStyle<span class="string">`</span></span><br><span class="line"><span class="string">  body &#123;</span></span><br><span class="line"><span class="string">    color: <span class="subst">$&#123;props =&gt; (props.whiteColor ? <span class="string">'white'</span> : <span class="string">'black'</span>)&#125;</span>;</span></span><br><span class="line"><span class="string">    font-family: <span class="subst">$&#123;props =&gt; props.theme.fontFamily&#125;</span>;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br><span class="line"></span><br><span class="line">&lt;ThemeProvider theme=&#123;&#123; <span class="attr">fontFamily</span>: <span class="string">'Helvetica Neue'</span> &#125;&#125;&gt;</span><br><span class="line">  &lt;React.Fragment&gt;</span><br><span class="line">    &lt;Navigation /&gt; &#123;<span class="comment">/* example of other top-level stuff */</span>&#125;</span><br><span class="line">    &lt;GlobalStyle whiteColor /&gt;</span><br><span class="line">  &lt;<span class="regexp">/React.Fragment&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>ThemeProvider&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="动画-keyframes"><a href="#动画-keyframes" target="_blank" rel="noopener" class="headerlink" title="动画 keyframes"></a>动画 <code>keyframes</code></h2><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> styled, &#123; keyframes &#125; <span class="keyword">from</span> <span class="string">'styled-components'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fadeIn = keyframes`</span><br><span class="line">  <span class="number">0</span>% &#123;</span><br><span class="line">    opacity: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100</span>% &#123;</span><br><span class="line">    opacity: <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">`</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> FadeInButton = styled.button`</span><br><span class="line">  animation: <span class="number">1</span>s $&#123;fadeIn&#125; ease-<span class="keyword">out</span>;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" target="_self" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a target="_self" href="2020/03/25/javascript/移动端/移动端横竖屏解决/" class="archive-article-date">
-  	<time datetime="2020-03-25T10:59:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a target="_self" class="archive-article-title" href="/2020/03/25/javascript/移动端/移动端横竖屏解决/">移动端横竖屏解决</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a target="_self" href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+
+
+
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '889ebc613106240a17c7',
+  	clientSecret: 'f5953ab0d37c7734725050818b00a90b94b21c61',
+  	repo: 'blogCommon',
+  	owner: 'messi1991',
+  	admin: ['messi1991'],
+  	id: 'Wed Apr 08 2020 17:47:07 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
+</script>
+  
+
+  
 
 
           </div>
@@ -250,7 +331,7 @@
 		mathjax: true,
 		isHome: false,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
